@@ -35,3 +35,5 @@ devcontainer up
 
 The dev container will automatically start a jypiter lab server.  If it doesn't
 you can start one by running ```./start-jypiter.sh```
+
+Open [http://localhost:8888](http://localhost:8888)
