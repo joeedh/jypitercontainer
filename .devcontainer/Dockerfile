@@ -4,7 +4,7 @@ FROM python:3.12.13-trixie
 
 RUN apt-get update
 RUN apt-get install git curl wget bash sudo -y
-RUN apt-get install vim -y
+RUN apt-get install nodejs npm vim -y
 RUN apt-get install gh -y
 
 # rebase on pull if necassary, don't insert merge commits

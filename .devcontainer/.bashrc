@@ -113,3 +113,4 @@ if ! shopt -oq posix; then
 fi
 
 source ~/git-completion.bash
+echo "Open Jupiter lab at http://localhost:8888"
