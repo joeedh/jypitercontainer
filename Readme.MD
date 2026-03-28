@@ -2,7 +2,17 @@ To start devcontainer:
 
 ## In VSCode
 
-Run command "clone repository in named volume" (this is important to prevent slow IO accessing windows NTFS).
+Run command "clone repository in volume" (this is important to prevent slow IO accessing windows NTFS).  Press `ctrl-p` to bring up the command search menu:
+
+![alt text](images/image.png)
+
+Click on github:
+![alt text](images/image-1.png)
+
+![alt text](images/image-2.png)
+
+Click on the 'master' branch
+
 
 ## Command line
 
