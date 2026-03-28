@@ -5,6 +5,9 @@ FROM python:3.12.13-trixie
 RUN apt-get update
 RUN apt-get install git curl wget bash sudo -y
 RUN apt-get install vim -y
+RUN apt-get install nodejs npm
+RUN apt-get install gh
+RUN git config --global pull.rebase true
 
 RUN chsh -s /bin/bash
 RUN echo "DSHELL=/bin/bash" >> /etc/adduser.conf
