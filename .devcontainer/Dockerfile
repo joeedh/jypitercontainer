@@ -7,6 +7,7 @@ RUN apt-get install git curl wget bash sudo -y
 RUN apt-get install vim -y
 RUN apt-get install gh -y
 RUN git config --global pull.rebase true
+git config --global core.autocrlf false 
 
 RUN chsh -s /bin/bash
 RUN echo "DSHELL=/bin/bash" >> /etc/adduser.conf
