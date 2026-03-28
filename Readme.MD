@@ -22,25 +22,6 @@ Click on github:
 Click on the 'master' branch
 
 
-## Command line
-
-Ensure you have nodejs and npm installed, for debian linux this is
-```
-sudo apt install npm nodejs -y
-```
-
-Install devcontainer cli, e.g.
-
-```
-sudo npm install --global @devcontainers/cli
-```
-
-## Starting the container
-
-```
-devcontainer up
-```
-
 The dev container will automatically start a jypiter lab server.  If it doesn't
 you can start one by running ```./start-jypiter.sh```
 
