@@ -6,9 +6,14 @@ RUN apt-get update
 RUN apt-get install git curl wget bash sudo -y
 RUN apt-get install vim -y
 RUN apt-get install gh -y
-RUN git config --global pull.rebase true
-git config --global core.autocrlf false 
 
+# rebase on pull if necassary, don't insert merge commits
+RUN git config --global pull.rebase true
+
+# disable autocrlf
+RUN git config --global core.autocrlf false 
+
+# set default shell to bash
 RUN chsh -s /bin/bash
 RUN echo "DSHELL=/bin/bash" >> /etc/adduser.conf
 

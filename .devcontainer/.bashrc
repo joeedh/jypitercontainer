@@ -112,4 +112,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-source ./git-completion.bash
+source ~/git-completion.bash
