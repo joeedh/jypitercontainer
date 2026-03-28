@@ -23,4 +23,5 @@ sudo npm install --global @devcontainers/cli
 devcontainer up
 ```
 
-The dev container will automatically start a jypiter lab server.
+The dev container will automatically start a jypiter lab server.  If it doesn't
+you can start one by running ```./start-jypiter.sh```
