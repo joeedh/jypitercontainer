@@ -23,16 +23,16 @@ ARG USER_GID=$USER_UID
 RUN groupadd --gid $USER_GID $USERNAME \
     && useradd --uid $USER_UID --gid $USER_GID -m $USERNAME
 
-RUN chsh -s /bin/bash vscode
+RUN chsh -s /bin/bash $USERNAME
 RUN chsh -s /bin/bash root
 
-RUN mkdir -p /home/vscode
+RUN mkdir -p /home/$USERNAME
 
 #remove passwords for vscode and root
-RUN passwd -d vscode
+RUN passwd -d $USERNAME
 RUN passwd -d root
 # add vscode user to sudoer root privilege group
-RUN usermod -aG sudo vscode
+RUN usermod -aG sudo $USERNAME
 
 RUN pip install --no-cache-dir \
     jupyter \
@@ -43,5 +43,11 @@ RUN pip install --no-cache-dir \
     matplotlib
 
 USER $USERNAME
+
+ARG ANACONDA_INSTALLER=Miniconda3-py313_26.1.1-1-Linux-x86_64.sh
+
+RUN curl -o /home/$USERNAME/$ANACONDA_INSTALLER  https://repo.anaconda.com/miniconda/$ANACONDA_INSTALLER
+RUN chown $USERNAME:$USERNAME /home/$USERNAME/$ANACONDA_INSTALLER
+RUN bash /home/$USERNAME/$ANACONDA_INSTALLER -b -p /home/$USERNAME/anaconda3
 
 EXPOSE 8888

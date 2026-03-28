@@ -113,6 +113,6 @@ if ! shopt -oq posix; then
 fi
 
 source ~/git-completion.bash
-echo "Open Jupiter lab at http://localhost:8888"
+echo "Open Jupiter lab at http://localhost:8888/?token=0"
 
 JUPYTER_CONFIG_DIR=/workspaces/jypitercontainer/.jupyter
