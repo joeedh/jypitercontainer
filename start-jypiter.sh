@@ -17,4 +17,4 @@ mkdir -p /workspaces/jypitercontainer/.jupyter/lab/user-settings
 mkdir -p /workspaces/jypitercontainer/notebook
 
 # start the sserver
-jupyter lab --ServerApp.token='0' --ip=0.0.0.0 --notebook-dir='/workspaces/jypitercontainer/notebook' --port=8888 
+jupyter lab --ServerApp.token='0' --ip=0.0.0.0 --no-browser --notebook-dir='/workspaces/jypitercontainer/notebook' --port=8888 
