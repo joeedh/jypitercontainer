@@ -1,3 +1,11 @@
+I suggest forking this repo.  Jupiter is setup to save user files to
+the `notebook` folder inside the repository (which the dev container will create), you can commit these files to git.  Note: always check for missing files with `git status`
+
+To login to github in the dev container run `gh auth login`
+
+
+# Starting
+
 To start devcontainer:
 
 ## In VSCode
